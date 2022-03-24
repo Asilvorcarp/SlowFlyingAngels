@@ -6,7 +6,7 @@
   "setting": {
     "urlCheck": true,
     "es6": false,
-    "enhance": true,
+    "enhance": false,
     "postcss": false,
     "preloadBackgroundData": false,
     "minified": false,
@@ -34,9 +34,9 @@
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true,
+    "minifyWXSS": false,
     "disableUseStrict": false,
-    "minifyWXML": true,
+    "minifyWXML": false,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
     "ignoreUploadUnusedFiles": true
