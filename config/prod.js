@@ -4,7 +4,11 @@ module.exports = {
   },
   defineConstants: {
   },
-  mini: {},
+  mini: {
+    prerender: {
+        include: ['pages/nodes/nodes'], // `pages/nodes/nodes` 也会参与 prerender
+    }
+  },
   h5: {
     /**
      * WebpackChain 插件配置
