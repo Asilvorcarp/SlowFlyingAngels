@@ -9,6 +9,7 @@ export default class SfaMap extends Component {
   render () {
     return (
         <Map longitude={120.0870} latitude={30.3050} id="map" style={{width: "100%", height: 300}} scale={14}/>
-    )
+    
+        )
   }
 }
