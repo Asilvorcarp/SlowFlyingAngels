@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { View, Text } from '@tarojs/components'
 import './index.scss'
-import SfaMap from '../../components/map'
+// import SfaMap from '../../components/map'
 
 export default class Index extends Component {
 
@@ -19,7 +19,7 @@ export default class Index extends Component {
     return (
       <View className='index'>
         <Text>Hello world!</Text>
-        <SfaMap/> 
+        {/* <SfaMap/>  */}
       </View>
     )
   }
