@@ -7,6 +7,7 @@ import { AtCard, AtTabBar, AtAvatar } from "taro-ui";
 // import MySwiper from '../../components/index/MySwiper'
 import { Swiper, SwiperItem } from "@tarojs/components";
 import Car from "../../components/index/car";
+
 import bookNow_svg from '../../assets/index/bookNow.svg'
 import item1 from '../../assets/index/swiperItem1.png'
 
@@ -32,7 +33,7 @@ export default class Index extends Component {
     this.setState({
       current: value,
     });
-    switch (value) {
+    switch (value) { //todo 有待优化的实现方式
       case 0:
         // Taro.redirectTo({
         //   url: "/pages/index/index",
@@ -104,7 +105,7 @@ export default class Index extends Component {
           </SwiperItem>
         </Swiper>
 
-        <View
+        <View id='service-intro-card'
           style={{
             paddingLeft: 20,
             paddingRight: 20,
@@ -145,7 +146,7 @@ export default class Index extends Component {
           </View>
         </View>
 
-        <View
+        <View id='workers-intro-card'
           style={{
             paddingLeft: 20,
             paddingRight: 20,
@@ -174,7 +175,7 @@ export default class Index extends Component {
           </View>
         </View>
 
-        <View
+        <View id='guestbook-card'
           style={{
             paddingLeft: 20,
             paddingRight: 20,
