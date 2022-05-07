@@ -1,0 +1,124 @@
+#inforBox {
+    position:absolute;
+    top:329Px;
+    width:95%;
+    height: 122Px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 11px;
+}
+#store_time_Box {
+    position: absolute;
+    top:185Px;
+    width:95%;
+    height: 134Px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 11px;
+}
+#carBox {
+    position:absolute;
+    top:20Px;
+    width:95%;
+    height: 155Px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 11px;
+}
+#InputName {
+    position:absolute;
+    width: 141Px;
+    left:70Px;
+    top:47Px;
+    font-size: 12Px;
+}
+#InputPhone {
+    position:absolute;
+    width:256Px;
+    left: 71Px;
+    top: 78Px;
+    font-size: 12Px;
+}
+#personName {
+    position:absolute;
+    left: 7.47%;
+    top: 50Px;
+    font-weight: 700;
+    font-size: 12Px;
+    font-family: 'Noto Sans SC';
+}
+#phoneNumber {
+    position:absolute;
+    left: 7.47%;
+    top: 81Px;
+    font-weight: 700;
+    font-size: 12Px;
+    font-family: 'Noto Sans SC';
+}
+.radioBox {
+    position: absolute;
+    top:48Px;
+    left:240Px;
+    font-size:14Px;
+    font-family: 'PingFang SC';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.radio {
+    transform:scale(0.65);
+}
+
+#store {
+    position:absolute;
+    left: 7.47%;
+    top: 50Px;
+    font-weight: 700;
+    font-size: 12Px;
+    font-family: 'Noto Sans SC';
+}
+#time {
+    position:absolute;
+    left: 7.47%;
+    top: 90Px;
+    font-weight: 700;
+    font-size: 12Px;
+    font-family: 'Noto Sans SC';
+}
+#InputPhoneButton {
+    position:absolute;
+    top:83Px;
+    left:326Px;
+    width: 16Px;            //14px偏小，不容易点中，暂改为16Px
+    height: 16Px;
+}
+#InputNameButton {
+    position:absolute;
+    top:53Px;
+    left:212Px;
+    width: 16Px;
+    height: 16Px;
+}
+#selectedStore {
+    font-family: 'PingFang SC';
+    position:absolute;
+    top: 49Px;
+    left:91Px;
+    font-size: 13Px;
+    color:#FF5555;
+}
+#selectedTime {
+    font-family: 'PingFang SC';
+    position:absolute;
+    top: 89Px;
+    left:91Px;
+    font-size: 13Px;
+    color:#FF5555;
+}
+#carInfo {
+    position: absolute;
+    top:45Px;
+    left:95Px;
+    width: 246Px;
+    font-family: 'PingFang SC';
+    font-size: 12Px;
+    color: rgba(0, 0, 0, 0.48);
+}

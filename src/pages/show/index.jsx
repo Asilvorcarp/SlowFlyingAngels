@@ -40,7 +40,7 @@ export default class Index extends Component {
         break;
       case 2:
         Taro.redirectTo({
-          url: "/pages/order/index",
+          url: "/pages/order/storeSelect/index",
         });
         break;
       case 3:
