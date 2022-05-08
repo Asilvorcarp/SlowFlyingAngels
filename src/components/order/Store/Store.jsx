@@ -7,17 +7,13 @@ import { Swiper, SwiperItem } from "@tarojs/components";
 import "./Store.scss";
 import grade_svg from "./icons/Grade.svg";
 import phone_svg from "./icons/phone_button.svg";
-import nav_svg from "./icons/nav_button.svg"
-import nearest_svg  from "./icons/nearest.svg"
-
+import nav_svg from "./icons/nav_button.svg";
+import nearest_svg from "./icons/nearest.svg";
 
 export default function Store(props) {
-  const nearest=()=>{
-    if(props.nearest)
-    return (
-      <Image src={nearest_svg} className="nearest"/>
-    )
-  }
+  const nearest = () => {
+    if (props.nearest) return <Image src={nearest_svg} className="nearest" />;
+  };
   return (
     <View
       style={{
@@ -60,15 +56,14 @@ export default function Store(props) {
           fontStyle: "normal",
           fontWeight: 400,
           fontSize: 14,
-          lineHeight:"17px",
+          lineHeight: "17px",
 
           color: "#000000",
         }}
       >
-        {props.storeName+"  "}
+        {props.storeName + "  "}
         {nearest()}
       </View>
-      
 
       <View
         style={{
@@ -91,11 +86,19 @@ export default function Store(props) {
       <View className="waitingTime">现在下单，等待时间小于30分钟</View>
       <View className="businessTime">{props.businessTime}</View>
       <View className="distance">{props.distance}km</View>
-      <View className="goforOrder">去预约</View>
-      <Image src={grade_svg} className='grade'/>
-      <Image src={phone_svg} className='phone_button'/>
-      <Image src={nav_svg} className='nav_button'/>
-
+      <View
+        className="goforOrder"
+        onClick={() => {
+          var pages = getCurrentPages();
+          pages[pages.length - 2].setData({ storePosition: props.position });
+          Taro.navigateBack({ delta: 1 });
+        }}
+      >
+        去预约
+      </View>
+      <Image src={grade_svg} className="grade" />
+      <Image src={phone_svg} className="phone_button" />
+      <Image src={nav_svg} className="nav_button" />
     </View>
   );
 }

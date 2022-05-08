@@ -16,6 +16,8 @@ import location from "../../assets/order/location.svg"
 import calander from "../../assets/order/calander.svg"
 import angle from "../../assets/order/angle.svg"
 
+
+const carInfomation = ["小型车一般是指排量在1.0-1.3左右的车型，比如欧洲E-NCAP，日本J-NCAP，C-NCAP等等。不过现在微型车和小型车，也包括其他相近车型的划分越来越模糊，一般是根据生产厂商的定位以及这款车的前身来确定其界别。"];
 export default class Index extends Component {
   componentWillMount() {}
 
@@ -23,7 +25,19 @@ export default class Index extends Component {
 
   componentWillUnmount() {}
 
-  componentDidShow() {}
+  componentDidShow() {
+    let pages = Taro.getCurrentPages();
+    let currPage = pages[pages.length - 1]; // 获取当前页面
+    if (currPage.__data__.storePosition) { // 获取选择页面回传的值
+      this.setState({ storePosition: currPage.__data__.storePosition })
+    } 
+    if (currPage.__data__.carTyper) { 
+      this.setState({ carType: currPage.__data__.carType })
+    } 
+    if (currPage.__data__.time) { 
+      this.setState({ time: currPage.__data__.time })
+    } 
+  }
 
   componentDidHide() {}
 
@@ -31,6 +45,10 @@ export default class Index extends Component {
     super(...arguments);
     this.state = {
       current: 2,
+      carType:0,//暂时用0表示小型车，建议车辆选择页面通过类似Store.jsx 91-94行的方式，结合compoentDidShow来改变carType
+      storePosition:"请选择门店",
+      time:"请选择场次",
+
       list: [
         {
           value: "先生",
@@ -100,7 +118,7 @@ export default class Index extends Component {
               left: 18, }}>
             车型选择：
           </Text>
-          <Text id="carInfo">小型车一般是指排量在1.0-1.3左右的车型，比如欧洲E-NCAP，日本J-NCAP，C-NCAP等等。不过现在微型车和小型车，也包括其他相近车型的划分越来越模糊，一般是根据生产厂商的定位以及这款车的前身来确定其界别。</Text>
+          <Text id="carInfo">{carInfomation[0]}</Text>
         </View>
 
         <View id="store_time_Box">
@@ -117,11 +135,11 @@ export default class Index extends Component {
           </Text>
           <Text id="store">门店</Text>
           <Text id="time">场次</Text>
-          <View id="selectedStore" onClick={()=>{Taro.redirectTo({url: "/pages/order/storeSelect/index"})}}>杭州市上城区凯旋街道凯旋路137号</View>
-          <View id="selectedTime">明天下午5:30 (2022/02/18 17:30)</View>
+          <View id="selectedStore" onClick={()=>{Taro.navigateTo({url: "/pages/order/storeSelect/index"})}}>{this.state.storePosition}</View>
+          <View id="selectedTime">{this.state.time}</View>
           <Image src={location} style={{position:"absolute",top:49,left:65,width:13,height:19}}/>
           <Image src={calander} style={{position:"absolute",top:88,left:65,width:16,height:18}}/>
-          <Image src={angle} style={{position:"absolute",top:55,left:310,width:6,height:10}} onClick={()=>{Taro.redirectTo({url: "/pages/order/storeSelect/index"})}}/>
+          <Image src={angle} style={{position:"absolute",top:55,left:310,width:6,height:10}} onClick={()=>{Taro.navigateTo({url: "/pages/order/storeSelect/index"})}}/>
           <Image src={angle} style={{position:"absolute",top:91,left:310,width:6,height:10}}/>
         </View>
 
