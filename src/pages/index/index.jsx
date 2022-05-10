@@ -128,17 +128,17 @@ export default class Index extends Component {
             }}
           >
             <Car
-              img="https://jdc.jd.com/img/200"
+              img={1}
               carName="小型车"
               price="25"
             ></Car>
             <Car
-              img="https://jdc.jd.com/img/200"
+              img={2}
               carName="SUV型车"
               price="30"
             ></Car>
             <Car
-              img="https://jdc.jd.com/img/200"
+              img={3}
               carName="商务车"
               price="35"
             ></Car>

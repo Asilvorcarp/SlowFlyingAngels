@@ -1,7 +1,7 @@
 export default defineAppConfig({
   pages: [
+    'pages/mine/index', //todo 临时修改主页 便于调试
     'pages/index/index',
-    'pages/mine/index',
     'pages/order/index',
     'pages/show/index',
     'pages/order/storeSelect/index'
