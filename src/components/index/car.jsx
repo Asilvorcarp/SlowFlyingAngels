@@ -8,6 +8,13 @@ import CAR_SVG from "../../assets/img/cars/CAR.svg";
 import SUV_SVG from "../../assets/img/cars/SUV.svg";
 import BigSUV_SVG from "../../assets/img/cars/BigSUV.svg";
 
+/*
+ * img: 图片
+ * carName: 车名
+ * price: 价格 (为空则不显示)
+*/
+// 如果props.img是数字，则显示对应车型；否则视为图片链接。
+
 export default function Car(props) {
   if (props.img == 1) {
     props.img = CAR_SVG;

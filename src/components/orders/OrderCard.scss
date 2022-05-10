@@ -1,77 +1,37 @@
-.waitingTime {
-  position: absolute;
-  left: 38Px;
-  top: 37Px;
+@import '../../assets/fonts/iconfont.css';
+// @import url('//at.alicdn.com/t/font_3391679_q5vm90bdatf.css');
 
+.iconfont {
+  font-size: 24px;
+}
+
+.button {
+  background: #FFFFFF;
+  border: 0.5px solid rgba(140, 140, 140, 0.85);
+  border-radius: 30px;
   font-family: 'PingFang SC';
   font-style: normal;
-  font-weight: 400;
-  font-size: 7Px;//使用大P因为小p貌似会被taro自动映射到rpx，导致样式出问题，详见taro文档
-  line-height: 10Px;
-
-  color: #FF5555;
+  font-weight: 550;
+  font-size: 22px;
+  padding: 2px 10px ;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
-.nowLabel {
-  position: absolute;
-  left: 17Px;
-  top:37Px;
-  width:18Px;
-  height: 10Px;
 
+.price {
   font-family: 'PingFang SC';
-  font-size: 7Px;
-  text-align: center;
-  line-height: 10Px;
-  background-color: #FF5555;
-  border-radius: 5Px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  text-align: right;
+}
 
-  color: #FFFFFF;
+.price-inside {
+  font-size: 36px;
 }
-.businessTime {
-  position:absolute;
-  left:16Px;
-  top:82Px;
-  font-size:10Px;
-  color: rgba(0, 0, 0, 0.5);
 
-}
-.distance {
-  position:absolute;
-  left:270Px;
-  top:67Px;
-  font-size:12Px;
-  color: rgba(0, 0, 0, 0.5);
-}
-.goforOrder {
-  position:absolute;
-  left:273Px;
-  top:50Px;
-  height:35Px;
-  font-size:12Px;
-}
-.grade {
-  position:absolute;
-  left:3.94%;
-  top:9.03%;
-  width:19Px;
-  height:19Px;
-}
-.phone_button {
-  position:absolute;
-  left:259Px;
-  top:95Px;
-  width:23Px;
-  height: 23Px;
-}
-.nav_button {
-  position:absolute;
-  left:304Px;
-  top:95Px;
-  width:23Px;
-  height: 23Px;
-}
-.nearest {
-  display: inline-block;
-  width:40Px;
-  height: 11Px;
+.icon-arrow-right {
+  font-weight: bold;
 }

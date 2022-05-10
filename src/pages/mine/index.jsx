@@ -88,16 +88,18 @@ export default class OrdersIndex extends Component {
               }}
             >
               <OrderCard
-                storeName="慢飞天使杭州上城区店"
-                position="杭州市上城区采荷街道凯旋路137号"
-                distance= {11.6}
-                businessTime="09:30 ~ 23:59"
+                carType = {1}
+                address = "弯湾洗车行 杭州市上城区凯旋街道凯旋路137号"
+                time = "2022-05-12T17:30:00"
+                price = {30}
+                status = {0}
               ></OrderCard>
               <OrderCard
-                storeName="慢飞天使杭州浙大紫金港店"
-                position="杭州市上城区凯旋街道凯旋路137号"
-                distance= {0.75}
-                businessTime="09:30 ~ 23:59"
+                carType = {2}
+                address = "弯湾洗车行 杭州市上城区凯旋街道凯旋路137号"
+                time = "2022-05-15T12:30:00"
+                price = {35.60}
+                status = {0}
               ></OrderCard>
 
             </View>
