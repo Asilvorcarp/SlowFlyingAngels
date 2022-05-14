@@ -30,19 +30,20 @@ export default function OrderCard(props) {
     console.log('timeDiffDays', timeDiffDays);
 
     let timeDiffString = "";
-    if (timeDiffDays == 0) {
-      timeDiffString = "今天";
-    } else if (timeDiffDays == 1) {
-      timeDiffString = "明天";
-    } else if(timeDiffDays == 2) {
-      timeDiffString = "后天";
-    } else if(timeDiffDays > 2) {
+    let dateDict = {
+      "-1": "昨天",
+      "0": "今天",
+      "1": "明天",
+      "2": "后天",
+    }
+    if (timeDiffDays in dateDict) {
+      timeDiffString = dateDict[timeDiffDays];
+      timeDiffString = timeDiffString + time.getHours() + ":" + time.getMinutes();
+    } else {
       return ""; // means don't show time diff
     }
-    timeDiffString = timeDiffString + time.getHours() + ":" + time.getMinutes();
-
-    console.log("time", time);
-    console.log("timeDiffString", timeDiffString);
+    console.log("time", time); //debug
+    console.log("timeDiffString", timeDiffString); //debug
     return timeDiffString;
   }
 
