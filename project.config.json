@@ -2,7 +2,7 @@
   "miniprogramRoot": "dist/",
   "projectname": "sfa",
   "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
-  "appid": "wxa4ade9f7885ffc01",
+  "appid": "wx7c4063d8dd6e593a",
   "setting": {
     "urlCheck": true,
     "es6": false,
